@@ -1,0 +1,195 @@
+:root {
+    /* COLOR PALLETE: DARKEST TO LIGHTEST */
+    --pallet-color1: #5c4033; 
+    --pallet-color2: #967336; 
+    --pallet-color3: #c08e80; 
+    --pallet-color4: #daaa94; 
+    --pallet-color5: #f9d6c3; 
+
+    /* FONT FAMILIES */
+        /* Heading */
+        --header-font: 'Playfair Display', 'serif';
+        /* Sub-Heading */
+        --sub-font: 'Lobster', 'serif';
+}
+
+body {
+    margin: 0;
+    background-color: var(--pallet-color1);
+}
+
+/* WEBSITE HEADER */
+.banner {
+    background-image: url(./Images/kids\ smiling.jpg), url(./Images/Universe.jpg);
+    background-repeat: no-repeat;
+    background-size: 60%, cover;
+    position: relative;
+    height: 40vh;
+    margin: 10px 10px 0 10px;
+    border-top-left-radius: 30px;
+    box-shadow: 1px 1px 10px black;
+}
+
+.title {
+    position: absolute;
+    bottom: -4.5%;
+    left: 5%;
+    font-family: var(--header-font);
+    color: var(--pallet-color5);
+    font-size: 6.5em;
+    line-height: 90%;
+    text-shadow: 3.5px 2px var(--pallet-color1);
+}
+
+.sub-title {
+    position: absolute;
+    bottom: 1%;
+    left: 5%;
+    margin-bottom: 0;
+    font-family: var(--sub-font);
+    color: var(--pallet-color4);
+    font-size: 2em;
+    text-shadow: 2px 2px var(--pallet-color1);
+}
+
+/* MAIN ARTICLE CONSISTING OF QUESTIONS AND SHORT ANSWER EXPLAING THE SITUATION */
+.explainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 40% ;
+    gap: 2rem;
+    width: 80%;
+    height: 50%;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: var(--pallet-color3);
+    color: var(--pallet-color5);
+    box-shadow: 3px 5px 20px black ;
+}
+
+.q-a2{
+    grid-row: 2;
+}
+
+.question {
+    font-family: var(--header-font);
+    margin-top: -0.1px;
+    color: var(--pallet-color1);
+    font-size: 2.5rem;
+}
+
+.answer {
+    margin-top: -4%;
+    font-size: 1.5rem;
+}
+
+.bold{
+    font-size: 2rem;
+    color: var(--pallet-color2);
+    vertical-align: -1.5px;
+}
+
+/* LINK TO CHARITIES FOR DONATION */
+
+.charities{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 25px;
+    font-size: 1.2em;
+}
+
+.charity-box1, .charity-box2, .charity-box3 {
+    background-color: var(--pallet-color3);
+    color: var(--pallet-color5);
+    width: 30%;
+    padding: 0 10px;
+    box-shadow: 3px 5px 20px black ;
+}
+
+.charity-heading {
+    font-family: var(--header-font);
+    color: var(--pallet-color1);
+}
+
+.charity-subheading {
+    font-family: var(--sub-font);
+}
+
+a{
+    text-decoration: none;
+    color: var(--pallet-color1);
+}
+
+a:hover {
+    color: var(--pallet-color2);
+}
+
+a:visited {
+    color: var(--pallet-color2);
+}
+
+/* CREDITS */
+footer {
+    width: 40%;
+    height: 7vh;
+    margin: 0 auto;
+    background-color: var(--pallet-color4);
+    text-align: right;
+}
+
+/* FOR DIFFERENT SCREEN SIZES */
+
+@media screen and (max-width: 500px) {
+    .banner{
+        background-size: 100%, cover;
+        border-radius: 0;
+    }
+    .title {
+        font-size: 3.4em;
+        top: -5%;
+        left: 2%; 
+    }
+    .sub-title{
+        left: 2%;
+        bottom: 3%;
+        line-height: 95%;
+    }
+    .explainer{
+        grid-template-columns: 1fr;
+    }
+    .charities{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .charity-box1, .charity-box2, .charity-box3{
+        width: 80%;
+    }
+    footer{
+        width: 60%;
+        height: 4vh;
+    }
+}
+    
+@media screen and (max-width: 900px) and (min-width: 501px) {
+    .banner{
+        background-image: url(./Images/Universe.jpg);
+        background-size: cover;
+        border-radius: 0;
+    }
+    .title{
+        font-size: 5.6em;
+        top: -12%;
+        line-height: 100%;
+    }
+    .sub-title{
+        font-size: 2.8em;
+        bottom: 3%;
+    }
+    footer{
+        width: 60%;
+        height: 4vh
+    }
+    
+}
+    
